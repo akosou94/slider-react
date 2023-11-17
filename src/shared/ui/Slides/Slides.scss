@@ -1,0 +1,38 @@
+.slides {
+	position: relative;
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	// overflow: hidden;
+
+	&__wrapper {
+		display: flex;
+	}
+
+	.buttons {
+		margin-top: 14rem;
+		display: flex;
+		justify-content: space-between;
+		z-index: 5;
+		
+		.button {
+			outline: none;
+			border: none;
+			padding: .6rem 1.2rem;
+			font-size: 1.2rem;
+			border-radius: .6rem;
+
+			&__prev {
+				background-color: gold;
+			}
+			&__next {
+				background-color: goldenrod;
+			}
+			
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}

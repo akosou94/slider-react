@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './Slides.scss'
-import Slide from '../Slide/Slide'
-import SlideOne from '../SlideOne/SlideOne'
-import { SlideTwo } from '../SlideTwo'
+import Slide from './Slide/Slide'
+import SlideOne from './SlideOne/SlideOne'
+import SlideTwo from './SlideTwo/SlideTwo'
+import SlideThree from './SlideThree/SlideThree'
+import SlideFour from './SlideFour/SlideFour'
+import SlideFive from './SlideFive/SlideFive'
 
-const slides = [SlideOne, SlideTwo]
+const slides = [SlideOne, SlideTwo, SlideThree, SlideFour, SlideFive]
 
 const Slides = () => {
 	const [currentIndex, setCurrentIndex] = useState(0)

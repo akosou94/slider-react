@@ -3,7 +3,7 @@ import './Brain.scss'
 
 const Brain = () => {
   return (
-    <img src='../../../../img/brain.jpg' alt='brain'></img>
+    <img className='brain-power' src='../../../../img/brain.jpg' alt='brain'></img>
   )
 }
 

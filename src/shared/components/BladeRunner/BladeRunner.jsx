@@ -1,8 +1,9 @@
 import React from 'react'
+import './BladeRunner.scss'
 
 const BladeRunner = () => {
   return (
-    <img src="../../../../img/blade-runner.jpeg" alt="blade-runner" />
+    <img className='blade-runner' src="../../../../img/blade-runner.jpeg" alt="blade-runner" />
   )
 }
 

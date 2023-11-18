@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react'
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa'
+import SlideFive from '../../shared/components/Slides/SlideFive/SlideFive'
+import SlideFour from '../../shared/components/Slides/SlideFour/SlideFour'
+import SlideOne from '../../shared/components/Slides/SlideOne/SlideOne'
+import SlideThree from '../../shared/components/Slides/SlideThree/SlideThree'
+import SlideTwo from '../../shared/components/Slides/SlideTwo/SlideTwo'
 import Circle from '../../shared/ui/Circle/Circle'
 import CircleDot from '../../shared/ui/CircleDot/CircleDot'
-import SlideFive from '../../shared/ui/Slides/SlideFive/SlideFive'
-import SlideFour from '../../shared/ui/Slides/SlideFour/SlideFour'
-import SlideOne from '../../shared/ui/Slides/SlideOne/SlideOne'
-import SlideThree from '../../shared/ui/Slides/SlideThree/SlideThree'
-import SlideTwo from '../../shared/ui/Slides/SlideTwo/SlideTwo'
 import Video from '../../shared/ui/Video/Video'
+import VideoTwo from '../../shared/ui/Video/VideoTwo/VideoTwo'
+import Brain from '../../shared/components/Brain/Brain'
 import './Slider.scss'
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
-const slidesArray = [SlideOne, Video, SlideTwo, SlideThree, SlideFour, SlideFive]
+const slidesArray = [SlideOne, Video, SlideTwo, VideoTwo, SlideThree, Brain, SlideFour, SlideFive]
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -41,7 +43,9 @@ const Slider = () => {
     <div className='slider'>
       <div className='slides'>
         {slides.map(slide => (
-          <div className='slides__slide' style={{ translate: `${-100 * currentIndex}%` }}>{slide}</div>
+          <div className='slides__slide' style={{ translate: `${-100 * currentIndex}%` }}>
+            {slide}
+          </div>
         ))}
       </div>
       <div className='buttons'>

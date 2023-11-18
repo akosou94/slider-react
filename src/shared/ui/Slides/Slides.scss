@@ -1,19 +1,15 @@
 .slides {
-	position: relative;
 	display:flex;
 	flex-direction: column;
-	width: 100%;
+	// width: 50%;
 	height: 100%;
 	// overflow: hidden;
 
-	&__wrapper {
-		display: flex;
-	}
-
 	.buttons {
-		margin-top: 14rem;
 		display: flex;
 		justify-content: space-between;
+		height: 100%;
+		align-items: center;
 		z-index: 5;
 		
 		.button {
@@ -34,5 +30,8 @@
 				cursor: pointer;
 			}
 		}
+	}
+	&__wrapper {
+		display: flex;
 	}
 }

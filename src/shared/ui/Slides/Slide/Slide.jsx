@@ -1,9 +1,8 @@
 import React from 'react'
-import './Slide.scss'
 
-const Slide = ({children}) => {
+const Slide = ({ children }) => {
   return (
-    <div className='slide'>{children}</div>
+    <div>{children}</div>
   )
 }
 

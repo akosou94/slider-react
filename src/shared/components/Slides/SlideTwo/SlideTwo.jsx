@@ -3,7 +3,7 @@ import './SlideTwo.scss'
 
 const SlideTwo = () => {
 	return (
-		<div>
+		<div className='slide-two'>
 			<h2>
 				Закон исключения третьего
 			</h2>

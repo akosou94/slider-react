@@ -3,7 +3,7 @@ import './SlideThree.scss'
 
 const SlideThree = () => {
 	return (
-		<div>
+		<div className='slide-three'>
 			<h2>
 				Закон противоречия
 			</h2>

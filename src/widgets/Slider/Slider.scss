@@ -59,4 +59,25 @@
 	&__wrapper {
 		display: flex;
 	}
+
+    &__page-control {
+        position: absolute;
+        left: 50%;
+        bottom: .5rem;
+        translate: -50%;
+        display: flex;
+        gap: .3rem;
+
+        &-dot-btn {
+            all: unset;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: scale 100ms ease-in-out;
+
+            &:hover {
+                scale: 1.2;
+            }
+        }
+    }
 }

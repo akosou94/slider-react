@@ -5,6 +5,8 @@ import SlideOne from '../../shared/ui/Slides/SlideOne/SlideOne'
 import SlideThree from '../../shared/ui/Slides/SlideThree/SlideThree'
 import SlideTwo from '../../shared/ui/Slides/SlideTwo/SlideTwo'
 import './Slider.scss'
+import Circle from '../../shared/ui/Circle/Circle'
+import CircleDot from '../../shared/ui/CircleDot/CircleDot'
 
 const slidesArray = [SlideOne, SlideTwo, SlideThree, SlideFour, SlideFive]
 
@@ -43,6 +45,11 @@ const Slider = () => {
       <div className='buttons'>
         <button className='button button__prev' onClick={prevSlide}>{'<<'}</button>
         <button className='button button__next' onClick={nextSlide}>{'>>'}</button>
+      </div>
+      <div className='slider__page-control'>
+        {slides.map((_, index) => (
+          <button className='slider__page-control-dot-btn' onClick={() => setCurrentIndex(index)}>{index === currentIndex ? <CircleDot /> : <Circle />}</button>
+        ))}
       </div>
     </div>
   )

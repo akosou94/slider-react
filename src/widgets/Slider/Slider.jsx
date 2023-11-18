@@ -10,9 +10,11 @@ import CircleDot from '../../shared/ui/CircleDot/CircleDot'
 import Video from '../../shared/ui/Video/Video'
 import VideoTwo from '../../shared/ui/Video/VideoTwo/VideoTwo'
 import Brain from '../../shared/components/Brain/Brain'
+import BladeRunner from '../../shared/components/BladeRunner/BladeRunner'
+import Man from '../../shared/components/Man/Man'
 import './Slider.scss'
 
-const slidesArray = [SlideOne, Video, SlideTwo, VideoTwo, SlideThree, Brain, SlideFour, SlideFive]
+const slidesArray = [Man, SlideOne, Video, SlideTwo, Brain, VideoTwo, SlideThree, BladeRunner, SlideFour, SlideFive]
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0)

@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import Circle from '../../shared/ui/Circle/Circle'
+import CircleDot from '../../shared/ui/CircleDot/CircleDot'
 import SlideFive from '../../shared/ui/Slides/SlideFive/SlideFive'
 import SlideFour from '../../shared/ui/Slides/SlideFour/SlideFour'
 import SlideOne from '../../shared/ui/Slides/SlideOne/SlideOne'
 import SlideThree from '../../shared/ui/Slides/SlideThree/SlideThree'
 import SlideTwo from '../../shared/ui/Slides/SlideTwo/SlideTwo'
+import Video from '../../shared/ui/Video/Video'
 import './Slider.scss'
-import Circle from '../../shared/ui/Circle/Circle'
-import CircleDot from '../../shared/ui/CircleDot/CircleDot'
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
-const slidesArray = [SlideOne, SlideTwo, SlideThree, SlideFour, SlideFive]
+const slidesArray = [SlideOne, Video, SlideTwo, SlideThree, SlideFour, SlideFive]
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -43,8 +45,8 @@ const Slider = () => {
         ))}
       </div>
       <div className='buttons'>
-        <button className='button button__prev' onClick={prevSlide}>{'<<'}</button>
-        <button className='button button__next' onClick={nextSlide}>{'>>'}</button>
+        <button className='button button__prev' onClick={prevSlide}><FaArrowAltCircleLeft /></button>
+        <button className='button button__next' onClick={nextSlide}><FaArrowAltCircleRight /></button>
       </div>
       <div className='slider__page-control'>
         {slides.map((_, index) => (

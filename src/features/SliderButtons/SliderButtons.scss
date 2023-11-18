@@ -1,0 +1,51 @@
+.buttons {
+  
+  .button {
+          all: unset;
+          position: absolute;
+          outline: none;
+          border: none;
+          font-size: 1.2rem;
+          top: 0;
+          bottom: 0;
+          padding: 1rem;
+          cursor: pointer;
+          transition: background-color 100ms ease-in-out;
+
+          &:hover {
+              background-color: rgb(0,0,0, .1);
+          }
+
+    &__prev {
+              left: 0;
+    }
+    &__next {
+              right: 0;
+    }
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__page-control {
+    position: absolute;
+    left: 50%;
+    bottom: -4rem;
+    translate: -50%;
+    display: flex;
+    gap: .3rem;
+
+    &-dot-btn {
+        all: unset;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: scale 100ms ease-in-out;
+
+        &:hover {
+            scale: 1.2;
+        }
+    }
+}
+}

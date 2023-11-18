@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa'
-import BladeRunner from '../../shared/components/BladeRunner/BladeRunner'
+/* import BladeRunner from '../../shared/components/BladeRunner/BladeRunner'
 import Brain from '../../shared/components/Brain/Brain'
 import Man from '../../shared/components/Man/Man'
 import SlideFive from '../../shared/components/Slides/SlideFive/SlideFive'
@@ -9,14 +9,13 @@ import SlideOne from '../../shared/components/Slides/SlideOne/SlideOne'
 import SlideThree from '../../shared/components/Slides/SlideThree/SlideThree'
 import SlideTwo from '../../shared/components/Slides/SlideTwo/SlideTwo'
 import Video from '../../shared/components/Video/Video'
-import VideoTwo from '../../shared/components/Video/VideoTwo/VideoTwo'
+import VideoTwo from '../../shared/components/Video/VideoTwo/VideoTwo' */
 import Circle from '../../shared/ui/Circle/Circle'
 import CircleDot from '../../shared/ui/CircleDot/CircleDot'
 import './Slider.scss'
 
-const slidesArray = [Man, SlideOne, Video, SlideTwo, Brain, VideoTwo, SlideThree, BladeRunner, SlideFour, SlideFive]
 
-const Slider = () => {
+const Slider = ({ slidesArray }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [slides, setCurrentSlides] = useState([])
 

@@ -1,30 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa'
-import Circle from '../../shared/ui/Circle/Circle'
-import CircleDot from '../../shared/ui/CircleDot/CircleDot'
+import SliderButtons from '../../features/SliderButtons/SliderButtons'
 import './Slider.scss'
 
 
-const Slider = ({ slidesArray }) => {
+const Slider = ({ slidesArray, buttons, dotted }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [slides, setCurrentSlides] = useState([])
-
-
-  const prevSlide = () => {
-    setCurrentIndex(prev => {
-      if (prev === 0) return slides.length - 1
-      return prev - 1
-    })
-  }
-
-  const nextSlide = () => {
-    setCurrentIndex(prev => {
-      if (prev === slides.length - 1) {
-        return 0;
-      }
-      return prev + 1;
-    });
-  }
 
   useEffect(() => {
     setCurrentSlides(slidesArray.map((item, index) => item()))
@@ -39,15 +20,13 @@ const Slider = ({ slidesArray }) => {
           </div>
         ))}
       </div>
-      <div className='buttons'>
-        <button className='button button__prev' onClick={prevSlide}><FaArrowAltCircleLeft /></button>
-        <button className='button button__next' onClick={nextSlide}><FaArrowAltCircleRight /></button>
-      </div>
-      <div className='slider__page-control'>
-        {slides.map((_, index) => (
-          <button className='slider__page-control-dot-btn' onClick={() => setCurrentIndex(index)}>{index === currentIndex ? <CircleDot /> : <Circle />}</button>
-        ))}
-      </div>
+      <SliderButtons
+        buttons={buttons}
+        dotted={dotted}
+        setCurrentIndex={setCurrentIndex}
+        currentIndexDot={currentIndex}
+        slides={slidesArray}
+      />
     </div>
   )
 }

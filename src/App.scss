@@ -1,4 +1,4 @@
-.App {
+.app {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +7,11 @@
     background-color: rgba(0, 0, 0, 0.400);
 }
 
-h2 {
+.title {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 5rem;
     margin-bottom: 2rem;
+    font-size: 1.6rem;
+    letter-spacing: .15rem;
+    color: rgba(0, 0, 0, 0.712);
 }

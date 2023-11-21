@@ -15,13 +15,16 @@ const slidesArrayOne = [SlideOne, Images, SlideTwo, VideoOne, SlideThree, BladeR
 const slidesArrayTwo = [Man, Images, BladeRunner]
 const slidesArrayThree = [VideoOne, VideoTwo]
 const slidesArrayFour = [Man, VideoOne, Images, VideoTwo, BladeRunner]
+const slidesArrayFive = [SlideOne, SlideTwo, SlideThree, SlideFour, SlideFive]
 
 
 function App() {
   return (
     <div className="app">
-      <h2 className='title'>Слайдер 1: Все виды слайдов + навигация</h2>
+      <h2 className='title'>Слайдер 1: Все виды слайдов + вся навигация</h2>
       <Slider slidesArray={slidesArrayOne} buttons dotted />
+      <h2 className='title'>Слайдер 1.1: Текст + частичная навигация</h2>
+      <Slider slidesArray={slidesArrayFive} dotted />
       <h2 className='title'>Слайдер 2: Картинки + Видео + частичная навигация</h2>
       <Slider slidesArray={slidesArrayFour} dotted />
       <h2 className='title'>Слайдер 3: Картинки + частичная навигация</h2>
